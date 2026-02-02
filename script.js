@@ -4,7 +4,7 @@ const questions = document.querySelectorAll(".question");
 const noButtons = document.querySelectorAll(".no");
 const confettiBox = document.getElementById("confetti");
 
-let q = 0;
+let qIndex = 0;
 
 function startLove() {
   music.play();
@@ -20,12 +20,15 @@ function goStory() {
 function goQuiz() {
   screens[2].classList.add("hidden");
   screens[3].classList.remove("hidden");
+  questions[0].classList.add("active");
 }
 
 function nextQ() {
-  questions[q].classList.remove("active");
-  q++;
-  questions[q].classList.add("active");
+  questions[qIndex].classList.remove("active");
+  qIndex++;
+  if (questions[qIndex]) {
+    questions[qIndex].classList.add("active");
+  }
 }
 
 function finalYes() {
@@ -34,24 +37,23 @@ function finalYes() {
   burstHearts();
 }
 
-// NO button runs away 😄
+/* NO button moves but stays clickable */
 noButtons.forEach(btn => {
-  btn.addEventListener("mouseover", () => {
-    btn.style.position = "absolute";
-    btn.style.left = Math.random() * 80 + "%";
-    btn.style.top = Math.random() * 80 + "%";
+  btn.addEventListener("mouseenter", () => {
+    btn.style.transform =
+      `translate(${Math.random() * 120 - 60}px, ${Math.random() * 120 - 60}px)`;
   });
 });
 
-// Heart burst 💥❤️
+/* HEART BURST ❤️ */
 function burstHearts() {
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 40; i++) {
     const heart = document.createElement("span");
     heart.innerText = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = "70%";
+    heart.style.top = "65%";
     confettiBox.appendChild(heart);
 
-    setTimeout(() => heart.remove(), 2000);
+    setTimeout(() => heart.remove(), 2300);
   }
 }

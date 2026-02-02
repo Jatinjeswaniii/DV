@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fade 1s ease;
+  animation: fade 0.8s ease;
 }
 
 .hidden {
@@ -32,16 +32,21 @@ h1, h2 {
 p {
   font-size: 18px;
   max-width: 700px;
-  margin-bottom: 20px;
   line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.poetry {
+  font-style: italic;
+  opacity: 0.95;
 }
 
 button {
-  padding: 14px 30px;
-  font-size: 17px;
+  padding: 14px 32px;
   border-radius: 30px;
   border: none;
-  margin: 10px;
+  font-size: 17px;
+  margin: 12px;
   background: white;
   color: #ff4b6e;
   cursor: pointer;
@@ -52,53 +57,80 @@ button:hover {
   transform: scale(1.1);
 }
 
+/* SLIDER */
 .slider {
   display: flex;
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  width: 95%;
 }
 
-.slider img {
-  width: 240px;
-  height: 320px;
-  border-radius: 20px;
-  object-fit: cover;
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   scroll-snap-align: center;
+}
+
+.photo-card img {
+  width: 260px;
+  max-width: 80vw;
+  height: auto;
+  border-radius: 22px;
+  object-fit: contain;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
+.caption {
+  margin-top: 10px;
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* QUESTIONS */
 .question {
   display: none;
+  width: 100%;
 }
 
 .question.active {
   display: block;
 }
 
-.no {
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   position: relative;
 }
 
-/* Confetti */
+.no {
+  background: #ffd9e1;
+}
+
+/* CONFETTI */
 #confetti span {
   position: fixed;
   font-size: 24px;
-  animation: pop 2s linear forwards;
+  animation: pop 2.3s linear forwards;
 }
 
 @keyframes pop {
   from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-200px); opacity: 0; }
+  to { transform: translateY(-220px); opacity: 0; }
 }
 
 @keyframes fade {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile polish */
+/* MOBILE */
 @media (max-width: 600px) {
   p { font-size: 16px; }
-  button { width: 90%; }
+  button { width: 85%; }
+  .btns { flex-direction: column; }
 }

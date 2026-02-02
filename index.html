@@ -14,72 +14,116 @@
 
 <div id="confetti"></div>
 
+<!-- INTRO -->
 <section class="screen intro">
   <h1>Hey Divya ❤️</h1>
-  <p>I made something very special for you…</p>
+  <p>I made something special… just for you.</p>
   <button onclick="startLove()">Start 💖</button>
 </section>
 
-<section class="screen slider hidden">
+<!-- PHOTO SLIDER -->
+<section class="screen slider-screen hidden">
   <h2>Us 🫶</h2>
+
   <div class="slider">
-    <img src="images/divya1.jpeg">
-    <img src="images/divya2.jpeg">
-    <img src="images/divya3.jpeg">
-     <img src="images/divya4.jpeg">
-     <img src="images/divya5.jpeg">
-     <img src="images/divya6.jpeg">
-    
+
+    <div class="photo-card">
+      <img src="images/divya1.jpeg" alt="Us together">
+      <p class="caption">my favorite picture ❤️</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="images/divya2.jpeg" alt="Us together">
+      <p class="caption">my 2nd favorite picture ❤️</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="images/divya3.jpeg" alt="Us together">
+      <p class="caption"> my 3rd favorite picture ❤️</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="images/divya4.jpeg" alt="Us together">
+      <p class="caption">Us… my favorite picture ❤️</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="images/divya5.jpeg" alt="Memories">
+      <p class="caption">Every moment with you feels special 🫶</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="images/divya6.jpeg" alt="Love">
+      <p class="caption">Smiles like this are my weakness 😍</p>
+    </div>
+
   </div>
+
   <button onclick="goStory()">Next ➡️</button>
 </section>
 
+<!-- STORY -->
 <section class="screen story hidden">
   <h2>From My Heart 💌</h2>
+
   <p>
-    When I first met you, I didn’t know you would be  
-    <strong>this lovable, this cute, this important</strong> to me. 14 dec to 14 feb ❤️
+    When I first met you, I didn’t know  
+    you would be this lovable, this cute,  
+    this important to me ❤️
   </p>
+
   <p>
     Somehow you became my favorite thought,  
     my calm in chaos,  
     and the smile I never want to lose 🌸
   </p>
-  <p>
-    Loving you feels easy…  
-    like something my heart always knew 🫶
+
+  <p class="poetry">
+    Every moment with you feels like a chapter  
+    I never want to end 💭
   </p>
+
   <button onclick="goQuiz()">Next 💕</button>
 </section>
 
+<!-- QUESTIONS -->
 <section class="screen quiz hidden">
-  <h2>Just Say Yes 😌</h2>
+  <h2>Just Answer Honestly 😌</h2>
 
   <div class="question active">
     <p>If I make a mistake, will you still choose me? 🥺</p>
-    <button onclick="nextQ()">Yes ❤️</button>
-    <button class="no">No 🙈</button>
+    <div class="btns">
+      <button onclick="nextQ()">Yes ❤️</button>
+      <button class="no">No 🙈</button>
+    </div>
   </div>
 
   <div class="question">
-    <p>Will you stay even on my worst days? 🌧️</p>
-    <button onclick="nextQ()">Yes 💕</button>
-    <button class="no">No 🙊</button>
+    <p>Will you stay with me even on my worst days? 🌧️</p>
+    <div class="btns">
+      <button onclick="nextQ()">Yes 💕</button>
+      <button class="no">No 🙊</button>
+    </div>
   </div>
 
   <div class="question">
     <p>Will you always be my favorite person? 🫶</p>
-    <button onclick="nextQ()">Yes 😘</button>
-    <button class="no">No 😜</button>
+    <div class="btns">
+      <button onclick="nextQ()">Yes 😘</button>
+      <button class="no">No 😜</button>
+    </div>
   </div>
 
   <div class="question">
     <p>Will you be my Valentine, Divya? 💍</p>
-    <button onclick="finalYes()">YES ❤️</button>
-    <button class="no">No 😭</button>
+    <div class="btns">
+      <button onclick="finalYes()">YES ❤️</button>
+      <button class="no">No 😭</button>
+    </div>
   </div>
 </section>
 
+<!-- FINAL -->
 <section class="screen final hidden">
   <h1>Happy Valentine’s Day 💘</h1>
   <p>
