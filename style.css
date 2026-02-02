@@ -21,13 +21,9 @@ body {
   animation: fade 0.8s ease;
 }
 
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
 
-h1, h2 {
-  margin-bottom: 20px;
-}
+h1, h2 { margin-bottom: 20px; }
 
 p {
   font-size: 18px;
@@ -36,10 +32,7 @@ p {
   margin-bottom: 20px;
 }
 
-.poetry {
-  font-style: italic;
-  opacity: 0.95;
-}
+.poetry { font-style: italic; }
 
 button {
   padding: 14px 32px;
@@ -50,12 +43,10 @@ button {
   background: white;
   color: #ff4b6e;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
-button:hover {
-  transform: scale(1.1);
-}
+button:hover { transform: scale(1.08); }
 
 /* SLIDER */
 .slider {
@@ -68,10 +59,10 @@ button:hover {
 }
 
 .photo-card {
+  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-align: center;
 }
 
 .photo-card img {
@@ -87,28 +78,22 @@ button:hover {
   margin-top: 10px;
   font-size: 15px;
   font-style: italic;
-  opacity: 0.95;
 }
 
 /* QUESTIONS */
-.question {
-  display: none;
-  width: 100%;
-}
-
-.question.active {
-  display: block;
-}
+.question { display: none; }
+.question.active { display: block; }
 
 .btns {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 20px;
-  position: relative;
 }
 
 .no {
   background: #ffd9e1;
+  position: relative;
 }
 
 /* CONFETTI */

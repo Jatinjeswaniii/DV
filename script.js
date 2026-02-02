@@ -37,12 +37,17 @@ function finalYes() {
   burstHearts();
 }
 
-/* NO button moves but stays clickable */
+/* NO button escapes BEFORE click (hover + touch) */
 noButtons.forEach(btn => {
-  btn.addEventListener("mouseenter", () => {
-    btn.style.transform =
-      `translate(${Math.random() * 120 - 60}px, ${Math.random() * 120 - 60}px)`;
-  });
+
+  const moveButton = () => {
+    const x = Math.random() * 160 - 80;
+    const y = Math.random() * 160 - 80;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+  };
+
+  btn.addEventListener("mouseenter", moveButton);   // desktop
+  btn.addEventListener("touchstart", moveButton);   // mobile
 });
 
 /* HEART BURST ❤️ */
@@ -53,7 +58,6 @@ function burstHearts() {
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.top = "65%";
     confettiBox.appendChild(heart);
-
     setTimeout(() => heart.remove(), 2300);
   }
 }
