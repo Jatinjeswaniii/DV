@@ -1,65 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>For Divya ❤️</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Divya ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<div class="hearts"></div>
+<div id="confetti"></div>
 
 <section class="screen intro">
-    <h1>Hey Divya ❤️</h1>
-    <p>This is something I made just for you…</p>
-    <button onclick="startLove()">Start 💖</button>
+  <h1>Hey Divya ❤️</h1>
+  <p>I made something very special for you…</p>
+  <button onclick="startLove()">Start 💖</button>
 </section>
 
-<section class="screen gallery hidden">
-    <h2>My Favorite Person 😍</h2>
-    <div class="photos">
-<img src="images/divya1.jpeg">
-<img src="images/divya2.jpeg">
-<img src="images/divya3.jpeg">
-    </div>
-    <p>Every picture of you makes my heart smile 💕</p>
-    <button onclick="goQuiz()">Next ➡️</button>
+<section class="screen slider hidden">
+  <h2>Us 🫶</h2>
+  <div class="slider">
+    <img src="images/divya1.jpeg">
+    <img src="images/divya2.jpeg">
+    <img src="images/divya3.jpeg">
+     <img src="images/divya4.jpeg">
+     <img src="images/divya5.jpeg">
+     <img src="images/divya6.jpeg">
+    
+  </div>
+  <button onclick="goStory()">Next ➡️</button>
+</section>
+
+<section class="screen story hidden">
+  <h2>From My Heart 💌</h2>
+  <p>
+    When I first met you, I didn’t know you would be  
+    <strong>this lovable, this cute, this important</strong> to me. 14 dec to 14 feb ❤️
+  </p>
+  <p>
+    Somehow you became my favorite thought,  
+    my calm in chaos,  
+    and the smile I never want to lose 🌸
+  </p>
+  <p>
+    Loving you feels easy…  
+    like something my heart always knew 🫶
+  </p>
+  <button onclick="goQuiz()">Next 💕</button>
 </section>
 
 <section class="screen quiz hidden">
-    <h2>Just Answer Honestly 😌</h2>
+  <h2>Just Say Yes 😌</h2>
 
-    <div class="question active">
-        <p>Do I cross your mind sometimes? 💭</p>
-        <button onclick="nextQ()">Yes 😊</button>
-        <button onclick="nextQ()">Always ❤️</button>
-    </div>
+  <div class="question active">
+    <p>If I make a mistake, will you still choose me? 🥺</p>
+    <button onclick="nextQ()">Yes ❤️</button>
+    <button class="no">No 🙈</button>
+  </div>
 
-    <div class="question">
-        <p>Do I make you smile even on bad days? 🌸</p>
-        <button onclick="nextQ()">Yes 💕</button>
-        <button onclick="nextQ()">Of course 🫶</button>
-    </div>
+  <div class="question">
+    <p>Will you stay even on my worst days? 🌧️</p>
+    <button onclick="nextQ()">Yes 💕</button>
+    <button class="no">No 🙊</button>
+  </div>
 
-    <div class="question">
-        <p>Will you be my Valentine, Divya? 💍</p>
-        <button onclick="finalYes()">YES ❤️</button>
-        <button id="noBtn">No 🙈</button>
-    </div>
+  <div class="question">
+    <p>Will you always be my favorite person? 🫶</p>
+    <button onclick="nextQ()">Yes 😘</button>
+    <button class="no">No 😜</button>
+  </div>
+
+  <div class="question">
+    <p>Will you be my Valentine, Divya? 💍</p>
+    <button onclick="finalYes()">YES ❤️</button>
+    <button class="no">No 😭</button>
+  </div>
 </section>
 
 <section class="screen final hidden">
-    <h1>Happy Valentine’s Day 💘</h1>
-    <p>
-        Divya, you are not just special…<br>
-        You are my comfort, my smile, my favorite feeling 🌹
-    </p>
-    <h2>I Love You ❤️</h2>
+  <h1>Happy Valentine’s Day 💘</h1>
+  <p>
+    Divya, you are my today,  
+    my tomorrow,  
+    and my always ❤️
+  </p>
+  <h2>— Yours, Jatin 🫶</h2>
 </section>
 
 <script src="script.js"></script>
