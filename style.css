@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff4b6e, #ff85a2);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.screen {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+button {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    background: white;
+    color: #ff4b6e;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ffe1e8;
+}
+
+.photos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos img {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
+
+/* Hearts animation */
+.hearts::before {
+    content: "❤️ 💖 💕 💘 💗";
+    position: fixed;
+    width: 100%;
+    top: -10%;
+    font-size: 30px;
+    animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+    from { top: -10%; }
+    to { top: 110%; }
+}
